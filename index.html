@@ -19,8 +19,12 @@
             font-family: 'Raleway', sans-serif;
             font-size: 3.5rem;
             color: #1a1a1a;
-            margin: 2.5rem auto;
             position: relative;
+            width: 100%;
+            max-width: 1200px;
+            /* control maximum width */
+            padding: 0 20px;
+            /* responsive padding */
         }
 
         #motto::after {
@@ -71,7 +75,9 @@
         </nav>
 
         <div class="d-flex flex-column" id="content-section">
-            <h1 id="motto" class="ms-2" style="margin-top:200px">Where Dreams Take Flight</h1>
+            <div class="d-flex justify-content-center align-items-center" style=" min-height: 70vh;">
+                <h1 id="motto">Where Dreams Take Flight</h1>
+            </div>
 
 
 
