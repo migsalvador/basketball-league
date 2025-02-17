@@ -12,42 +12,72 @@
         img {
             mix-blend-mode: multiply;
         }
+
+        #motto {
+
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 3.5rem;
+            color: #1a1a1a;
+            margin: 2.5rem auto;
+            position: relative;
+        }
+
+        #motto::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #FF6B6B;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
     </style>
+
 
 </head>
 
 <body>
 
 
+    <div class="d-flex flex-column">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/jumpman.png" alt="Bootstrap" width="110" height="90">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="images/jumpman.png" alt="Bootstrap" width="110" height="90">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="players.html">Players</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="players.html">Players</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Statistics</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Statistics</a>
-                    </li>
-
-                </ul>
+                    </ul>
+                </div>
             </div>
+        </nav>
+
+        <div class="d-flex flex-column" id="content-section">
+            <h1 id="motto" class="ms-2" style="margin-top:200px">Where Dreams Take Flight</h1>
+
+
+
         </div>
-    </nav>
+
+    </div>
 
 
 
