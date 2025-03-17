@@ -1,0 +1,19 @@
+  #jumpman-image {
+      mix-blend-mode: multiply;
+  }
+
+  .navbar-toggler {
+      border: 0;
+  }
+
+  .navbar {
+      --bs-navbar-padding-y: 0;
+  }
+
+  .nav-item-spacing {
+      margin-left: 25px;
+  }
+
+  .nav-item-font {
+      font-weight: bold;
+  }
