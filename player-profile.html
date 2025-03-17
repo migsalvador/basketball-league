@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nikos Alcala - Player Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .player-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 15px;
+        }
+
+        .player-header {
+            position: relative;
+            padding-top: 20px;
+        }
+
+        .player-number {
+            font-size: 8rem;
+            font-weight: 800;
+            color: rgba(33, 37, 41, 0.08);
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 1;
+        }
+
+        .player-name {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #212529;
+            margin-bottom: 0;
+        }
+
+        .player-team {
+            font-weight: 500;
+            color: #6c757d;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .player-image-container {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+        }
+
+        .player-image-container img {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+        }
+
+        .stats-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 15px 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .stat-box:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: #212529;
+        }
+
+        .info-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            flex-grow: 1;
+        }
+
+        .info-label {
+            color: #6c757d;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .player-bio {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #495057;
+            margin-bottom: 30px;
+        }
+
+        .action-btn {
+            padding: 8px 20px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 767.98px) {
+            .player-number {
+                font-size: 6rem;
+            }
+
+            .player-name {
+                font-size: 2rem;
+            }
+
+            .player-image-container {
+                height: 300px;
+                margin-bottom: 20px;
+            }
+
+            .stats-container,
+            .info-container {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="player-container">
+        <div class="player-header">
+            <div class="player-number">#5</div>
+            <h1 class="player-name">Nikos Alcala</h1>
+            <p class="player-team">Genus (GNS)</p>
+        </div>
+
+        <div class="row">
+            <!-- Player Image -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="player-image-container">
+                    <img src="images/nikosalcala.png" alt="Nikos Alcala">
+                </div>
+            </div>
+
+            <!-- Player Stats -->
+            <div class="col-md-3 mb-4 mb-md-0">
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <div class="stat-label">PPG</div>
+                        <div class="stat-value">15.7</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">RPG</div>
+                        <div class="stat-value">3.8</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">APG</div>
+                        <div class="stat-value">7.2</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">MPG</div>
+                        <div class="stat-value">23.3</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Player Info -->
+            <div class="col-md-5">
+                <div class="info-container">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-rulers"></i>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-label">Height</p>
+                            <p class="info-value">5'7"</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-label">Games Played</p>
+                            <p class="info-value">32</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-label">Position</p>
+                            <p class="info-value">Point Guard</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-label">Season</p>
+                            <p class="info-value">2024-25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player Bio -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="info-container">
+                    <h4 class="mb-3">Player Bio</h4>
+                    <p class="player-bio">
+                        Nikos Alcala is a dynamic point guard known for his scoring ability and defensive intensity.
+                        He joined Genus in 2017 and has been a key contributor to the team's success over the past
+                        three seasons. With his exceptional court vision and leadership qualities, Alcala has earned
+                        the respect of teammates and opponents alike. His dedication to improving his game is evident
+                        in his consistent performance statistics and growing influence on the court.
+                    </p>
+                    <div class="text-end">
+                        <a href="#" class="btn btn-primary action-btn">Full Stats</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
