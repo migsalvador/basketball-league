@@ -87,6 +87,12 @@
             border-bottom: none;
         }
 
+        .table th,
+        .table td {
+            width: 10%;
+            /* Distributes width evenly across 10 columns */
+        }
+
         .player-link {
             color: var(--orange-primary);
             text-decoration: none;
@@ -105,14 +111,19 @@
             padding: 0 1rem;
         }
 
-        /* Team color indicators */
+        /* Team indicator styling */
+        .team-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            /* Space between bar and text */
+        }
+
         .team-tag {
             display: inline-block;
             width: 3px;
             height: 16px;
-            margin-right: 6px;
             border-radius: 2px;
-            vertical-align: middle;
         }
 
         .team-gns {
@@ -135,10 +146,7 @@
 </head>
 
 <body>
-
-
     <div class="d-flex flex-column">
-
         <div id="navbar-placeholder"></div>
 
         <div class="page-header">
@@ -170,7 +178,12 @@
                                 <th scope="row">1</th>
                                 <td><a href="#" class="player-link">Cruz</a></td>
                                 <td>Joseph</td>
-                                <td><span class="team-tag team-gns"></span>GNS</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-gns"></div>
+                                        <span>GNS</span>
+                                    </div>
+                                </td>
                                 <td>14.2</td>
                                 <td>8.5</td>
                                 <td>3.2</td>
@@ -182,7 +195,12 @@
                                 <th scope="row">2</th>
                                 <td><a href="#" class="player-link">Lopez</a></td>
                                 <td>Andre</td>
-                                <td><span class="team-tag team-gns"></span>GNS</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-gns"></div>
+                                        <span>GNS</span>
+                                    </div>
+                                </td>
                                 <td>23.3</td>
                                 <td>15.7</td>
                                 <td>6.8</td>
@@ -194,7 +212,12 @@
                                 <th scope="row">3</th>
                                 <td><a href="#" class="player-link">Estanislao</a></td>
                                 <td>Jardin</td>
-                                <td><span class="team-tag team-gns"></span>GNS</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-gns"></div>
+                                        <span>GNS</span>
+                                    </div>
+                                </td>
                                 <td>10.2</td>
                                 <td>5.3</td>
                                 <td>2.1</td>
@@ -206,7 +229,12 @@
                                 <th scope="row">4</th>
                                 <td><a href="#" class="player-link">Enriquez</a></td>
                                 <td>Joshua</td>
-                                <td><span class="team-tag team-gns"></span>GNS</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-gns"></div>
+                                        <span>GNS</span>
+                                    </div>
+                                </td>
                                 <td>18.5</td>
                                 <td>12.4</td>
                                 <td>4.5</td>
@@ -218,7 +246,12 @@
                                 <th scope="row">5</th>
                                 <td><a href="player-profile.html" class="player-link">Alcala</a></td>
                                 <td>Nikos</td>
-                                <td><span class="team-tag team-gns"></span>GNS</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-gns"></div>
+                                        <span>GNS</span>
+                                    </div>
+                                </td>
                                 <td>16.8</td>
                                 <td>9.8</td>
                                 <td>5.3</td>
@@ -230,7 +263,12 @@
                                 <th scope="row">6</th>
                                 <td><a href="#" class="player-link">Landa</a></td>
                                 <td>Steven</td>
-                                <td><span class="team-tag team-gns"></span>GNS</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-gns"></div>
+                                        <span>GNS</span>
+                                    </div>
+                                </td>
                                 <td>21.5</td>
                                 <td>13.2</td>
                                 <td>7.1</td>
@@ -242,7 +280,12 @@
                                 <th scope="row">7</th>
                                 <td><a href="#" class="player-link">Padilla</a></td>
                                 <td>Julio</td>
-                                <td><span class="team-tag team-gns"></span>GNS</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-gns"></div>
+                                        <span>GNS</span>
+                                    </div>
+                                </td>
                                 <td>15.4</td>
                                 <td>8.9</td>
                                 <td>3.8</td>
@@ -254,7 +297,12 @@
                                 <th scope="row">8</th>
                                 <td><a href="#" class="player-link">Mistosamente</a></td>
                                 <td>Fritz</td>
-                                <td><span class="team-tag team-swg"></span>SWG</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-swg"></div>
+                                        <span>SWG</span>
+                                    </div>
+                                </td>
                                 <td>22.7</td>
                                 <td>16.5</td>
                                 <td>4.2</td>
@@ -266,7 +314,12 @@
                                 <th scope="row">9</th>
                                 <td><a href="#" class="player-link">Tanara</a></td>
                                 <td>James</td>
-                                <td><span class="team-tag team-swg"></span>SWG</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-swg"></div>
+                                        <span>SWG</span>
+                                    </div>
+                                </td>
                                 <td>19.8</td>
                                 <td>11.3</td>
                                 <td>6.5</td>
@@ -278,7 +331,12 @@
                                 <th scope="row">10</th>
                                 <td><a href="#" class="player-link">Tirona</a></td>
                                 <td>Thomas</td>
-                                <td><span class="team-tag team-swg"></span>SWG</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-swg"></div>
+                                        <span>SWG</span>
+                                    </div>
+                                </td>
                                 <td>17.6</td>
                                 <td>10.2</td>
                                 <td>5.7</td>
@@ -291,7 +349,12 @@
                                 <th scope="row">11</th>
                                 <td><a href="#" class="player-link">Santos</a></td>
                                 <td>Lucas</td>
-                                <td><span class="team-tag team-sqm"></span>SQM</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-sqm"></div>
+                                        <span>SQM</span>
+                                    </div>
+                                </td>
                                 <td>24.5</td>
                                 <td>17.8</td>
                                 <td>5.9</td>
@@ -303,7 +366,12 @@
                                 <th scope="row">12</th>
                                 <td><a href="#" class="player-link">Soriano</a></td>
                                 <td>Jed</td>
-                                <td><span class="team-tag team-sqm"></span>SQM</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-sqm"></div>
+                                        <span>SQM</span>
+                                    </div>
+                                </td>
                                 <td>19.3</td>
                                 <td>11.5</td>
                                 <td>6.2</td>
@@ -315,7 +383,12 @@
                                 <th scope="row">13</th>
                                 <td><a href="#" class="player-link">Suriaga</a></td>
                                 <td>Edrick</td>
-                                <td><span class="team-tag team-sqm"></span>SQM</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-sqm"></div>
+                                        <span>SQM</span>
+                                    </div>
+                                </td>
                                 <td>16.8</td>
                                 <td>9.4</td>
                                 <td>4.3</td>
@@ -327,7 +400,12 @@
                                 <th scope="row">14</th>
                                 <td><a href="#" class="player-link">Torreno</a></td>
                                 <td>Doenne</td>
-                                <td><span class="team-tag team-fa"></span>FA</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-fa"></div>
+                                        <span>FA</span>
+                                    </div>
+                                </td>
                                 <td>12.5</td>
                                 <td>6.8</td>
                                 <td>3.1</td>
@@ -339,7 +417,12 @@
                                 <th scope="row">15</th>
                                 <td><a href="#" class="player-link">Salvador</a></td>
                                 <td>Logan</td>
-                                <td><span class="team-tag team-fa"></span>FA</td>
+                                <td>
+                                    <div class="team-indicator">
+                                        <div class="team-tag team-fa"></div>
+                                        <span>FA</span>
+                                    </div>
+                                </td>
                                 <td>11.2</td>
                                 <td>5.9</td>
                                 <td>2.8</td>
@@ -352,8 +435,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <script src="javascript/navbar.js"></script>
@@ -362,6 +443,5 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
-
 
 </html>
