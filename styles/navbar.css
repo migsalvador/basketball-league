@@ -1,5 +1,7 @@
-  #jumpman-image {
+  #logo-image {
       mix-blend-mode: multiply;
+      height: 50px;
+      width: 100px;
   }
 
   .navbar-toggler {
