@@ -2,53 +2,56 @@
   <head>
     <title>Players</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles/navbar.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-      :root {
-        --orange-primary: #ff6b35;
-        --orange-secondary: #ff8c61;
-      }
+        :root {
+            --primary-color: #ff1f8e;
+            --primary-hover: #ff4da6;
+            --dark-bg: #121212;
+        }
 
-      body {
-        background-color: #f8f9fa;
-      }
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            overflow-x: hidden;
+        }
 
-      .page-header {
-        background-color: var(--orange-primary);
-        color: white;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        border-radius: 0 0 1rem 1rem;
-        box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
-      }
+        .page-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 0 0 1rem 1rem;
+            box-shadow: 0 4px 12px rgba(255, 31, 142, 0.3);
+        }
 
-      .table-container {
-        background-color: white;
-        border-radius: 1rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        padding: 0.5rem;
-        margin-bottom: 2rem;
-      }
+        .table-container {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(255, 31, 142, 0.1);
+            padding: 0.5rem;
+            margin-bottom: 2rem;
+        }
 
-      .table {
-        margin-bottom: 0;
-        border-collapse: separate;
-        border-spacing: 0;
-      }
+        .table {
+            margin-bottom: 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            color: white;
+        }
 
-      .table thead {
-        background-color: var(--orange-primary);
-        color: white;
-      }
+        .table thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
 
       .table thead th {
         border: none;
@@ -71,42 +74,41 @@
         transition: all 0.2s ease;
       }
 
-      .table tbody tr:hover {
-        background-color: #fff5f0;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(255, 107, 53, 0.1);
-      }
+        .table tbody tr:hover {
+            background-color: rgba(255, 31, 142, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 31, 142, 0.1);
+        }
 
-      .table tbody td,
-      .table tbody th {
-        padding: 0.75rem;
-        vertical-align: middle;
-        border-top: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
+        .table tbody td,
+        .table tbody th {
+            padding: 0.75rem;
+            vertical-align: middle;
+            border-top: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
       .table tbody tr:last-child td,
       .table tbody tr:last-child th {
         border-bottom: none;
       }
 
-      .table th,
-      .table td {
-        width: 10%;
-        /* Distributes width evenly across 10 columns */
-      }
+        .table th,
+        .table td {
+            width: 10%;
+        }
 
-      .player-link {
-        color: var(--orange-primary);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease;
-      }
+        .player-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
 
-      .player-link:hover {
-        color: var(--orange-secondary);
-        text-decoration: underline;
-      }
+        .player-link:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
 
       .container {
         max-width: 1400px;
@@ -114,13 +116,12 @@
         padding: 0 1rem;
       }
 
-      /* Team indicator styling */
-      .team-indicator {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        /* Space between bar and text */
-      }
+        /* Team indicator styling */
+        .team-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
       .team-tag {
         display: inline-block;
@@ -133,312 +134,459 @@
         background-color: #3498db;
       }
 
-      .team-swg {
-        background-color: purple;
-      }
+        .team-swg {
+            background-color: #9b59b6;
+        }
 
-      .team-sqm {
-        background-color: red;
-      }
+        .team-sqm {
+            background-color: #e74c3c;
+        }
 
-      .team-fa {
-        background-color: #95a5a6;
-      }
+        .team-fa {
+            background-color: #95a5a6;
+        }
+
+        .outline-text {
+            font-size: 20rem;
+            position: absolute;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 31, 142, 0.15);
+            z-index: -1;
+            white-space: nowrap;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 900;
+            letter-spacing: -15px;
+        }
+
+        .floating-dots {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            opacity: 0.4;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .dot-1 {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .dot-2 {
+            top: 30%;
+            right: 15%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 1s;
+        }
+
+        .dot-3 {
+            bottom: 25%;
+            left: 20%;
+            width: 8px;
+            height: 8px;
+            animation-delay: 2s;
+        }
+
+        .dot-4 {
+            bottom: 15%;
+            right: 10%;
+            width: 12px;
+            height: 12px;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.1);
+            }
+        }
+
+        .decorative-element {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .decorative-circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 31, 142, 0.2);
+            top: -150px;
+            left: -150px;
+        }
+
+        .decorative-circle::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 31, 142, 0.15);
+            top: 50px;
+            left: 50px;
+        }
+
+        .decorative-lines {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            right: -100px;
+            overflow: hidden;
+        }
+
+        .decorative-lines::before,
+        .decorative-lines::after {
+            content: '';
+            position: absolute;
+            background-color: rgba(255, 31, 142, 0.2);
+        }
+
+        .decorative-lines::before {
+            width: 2px;
+            height: 200px;
+            transform: rotate(45deg);
+            left: 100px;
+            top: 0;
+        }
+
+        .decorative-lines::after {
+            width: 200px;
+            height: 2px;
+            transform: rotate(45deg);
+            left: 0;
+            top: 100px;
+        }
+
+        @media (max-width: 767.98px) {
+            .outline-text {
+                font-size: 5rem;
+                letter-spacing: -2px;
+                opacity: 0;
+            }
+
+            .floating-dots {
+                width: 8px;
+                height: 8px;
+            }
+        }
     </style>
   </head>
 
-  <body>
-    <div class="d-flex flex-column">
-      <div id="navbar-placeholder"></div>
+<body>
+    <div class="container-fluid p-0 position-relative overflow-hidden">
+        <!-- Background outline text -->
+        <div class="outline-text">STATS</div>
 
-      <div class="page-header">
-        <div class="container">
-          <h1 class="mb-0">Players Statistics</h1>
+        <!-- Decorative elements -->
+        <div class="decorative-element decorative-circle"></div>
+        <div class="decorative-element decorative-lines"></div>
+
+        <div class="floating-dots dot-1"></div>
+        <div class="floating-dots dot-2"></div>
+        <div class="floating-dots dot-3"></div>
+        <div class="floating-dots dot-4"></div>
+
+        <div class="d-flex flex-column">
+            <div id="navbar-placeholder"></div>
+
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="mb-0">Players Statistics</h1>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="table-container">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Team</th>
+                                    <th scope="col">MIN</th>
+                                    <th scope="col">PPG</th>
+                                    <th scope="col">RPG</th>
+                                    <th scope="col">APG</th>
+                                    <th scope="col">SPG</th>
+                                    <th scope="col">BPG</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td><a href="#" class="player-link">Cruz</a></td>
+                                    <td>Joseph</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-gns"></div>
+                                            <span>GNS</span>
+                                        </div>
+                                    </td>
+                                    <td>14.2</td>
+                                    <td>8.5</td>
+                                    <td>3.2</td>
+                                    <td>2.1</td>
+                                    <td>1.3</td>
+                                    <td>0.4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td><a href="#" class="player-link">Lopez</a></td>
+                                    <td>Andre</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-gns"></div>
+                                            <span>GNS</span>
+                                        </div>
+                                    </td>
+                                    <td>23.3</td>
+                                    <td>15.7</td>
+                                    <td>6.8</td>
+                                    <td>4.2</td>
+                                    <td>1.8</td>
+                                    <td>1.2</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td><a href="#" class="player-link">Estanislao</a></td>
+                                    <td>Jardin</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-gns"></div>
+                                            <span>GNS</span>
+                                        </div>
+                                    </td>
+                                    <td>10.2</td>
+                                    <td>5.3</td>
+                                    <td>2.1</td>
+                                    <td>1.5</td>
+                                    <td>0.8</td>
+                                    <td>0.2</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td><a href="#" class="player-link">Enriquez</a></td>
+                                    <td>Joshua</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-gns"></div>
+                                            <span>GNS</span>
+                                        </div>
+                                    </td>
+                                    <td>18.5</td>
+                                    <td>12.4</td>
+                                    <td>4.5</td>
+                                    <td>3.2</td>
+                                    <td>1.5</td>
+                                    <td>0.6</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td><a href="player-profile.html" class="player-link">Alcala</a></td>
+                                    <td>Nikos</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-gns"></div>
+                                            <span>GNS</span>
+                                        </div>
+                                    </td>
+                                    <td>16.8</td>
+                                    <td>9.8</td>
+                                    <td>5.3</td>
+                                    <td>2.4</td>
+                                    <td>1.1</td>
+                                    <td>0.8</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td><a href="#" class="player-link">Landa</a></td>
+                                    <td>Steven</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-gns"></div>
+                                            <span>GNS</span>
+                                        </div>
+                                    </td>
+                                    <td>21.5</td>
+                                    <td>13.2</td>
+                                    <td>7.1</td>
+                                    <td>1.8</td>
+                                    <td>0.9</td>
+                                    <td>1.4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td><a href="#" class="player-link">Padilla</a></td>
+                                    <td>Julio</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-gns"></div>
+                                            <span>GNS</span>
+                                        </div>
+                                    </td>
+                                    <td>15.4</td>
+                                    <td>8.9</td>
+                                    <td>3.8</td>
+                                    <td>4.5</td>
+                                    <td>1.6</td>
+                                    <td>0.3</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td><a href="#" class="player-link">Mistosamente</a></td>
+                                    <td>Fritz</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-swg"></div>
+                                            <span>SWG</span>
+                                        </div>
+                                    </td>
+                                    <td>22.7</td>
+                                    <td>16.5</td>
+                                    <td>4.2</td>
+                                    <td>5.3</td>
+                                    <td>1.9</td>
+                                    <td>0.5</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9</th>
+                                    <td><a href="#" class="player-link">Tanara</a></td>
+                                    <td>James</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-swg"></div>
+                                            <span>SWG</span>
+                                        </div>
+                                    </td>
+                                    <td>19.8</td>
+                                    <td>11.3</td>
+                                    <td>6.5</td>
+                                    <td>2.8</td>
+                                    <td>1.2</td>
+                                    <td>0.9</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10</th>
+                                    <td><a href="#" class="player-link">Tirona</a></td>
+                                    <td>Thomas</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-swg"></div>
+                                            <span>SWG</span>
+                                        </div>
+                                    </td>
+                                    <td>17.6</td>
+                                    <td>10.2</td>
+                                    <td>5.7</td>
+                                    <td>3.1</td>
+                                    <td>1.4</td>
+                                    <td>0.7</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">11</th>
+                                    <td><a href="#" class="player-link">Santos</a></td>
+                                    <td>Lucas</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-sqm"></div>
+                                            <span>SQM</span>
+                                        </div>
+                                    </td>
+                                    <td>24.5</td>
+                                    <td>17.8</td>
+                                    <td>5.9</td>
+                                    <td>4.7</td>
+                                    <td>1.7</td>
+                                    <td>0.8</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">12</th>
+                                    <td><a href="#" class="player-link">Soriano</a></td>
+                                    <td>Jed</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-sqm"></div>
+                                            <span>SQM</span>
+                                        </div>
+                                    </td>
+                                    <td>19.3</td>
+                                    <td>11.5</td>
+                                    <td>6.2</td>
+                                    <td>2.8</td>
+                                    <td>1.3</td>
+                                    <td>0.9</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13</th>
+                                    <td><a href="#" class="player-link">Suriaga</a></td>
+                                    <td>Edrick</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-sqm"></div>
+                                            <span>SQM</span>
+                                        </div>
+                                    </td>
+                                    <td>16.8</td>
+                                    <td>9.4</td>
+                                    <td>4.3</td>
+                                    <td>3.5</td>
+                                    <td>1.1</td>
+                                    <td>0.4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">14</th>
+                                    <td><a href="#" class="player-link">Torreno</a></td>
+                                    <td>Doenne</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-fa"></div>
+                                            <span>FA</span>
+                                        </div>
+                                    </td>
+                                    <td>12.5</td>
+                                    <td>6.8</td>
+                                    <td>3.1</td>
+                                    <td>1.9</td>
+                                    <td>0.8</td>
+                                    <td>0.3</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">15</th>
+                                    <td><a href="#" class="player-link">Salvador</a></td>
+                                    <td>Logan</td>
+                                    <td>
+                                        <div class="team-indicator">
+                                            <div class="team-tag team-fa"></div>
+                                            <span>FA</span>
+                                        </div>
+                                    </td>
+                                    <td>11.2</td>
+                                    <td>5.9</td>
+                                    <td>2.8</td>
+                                    <td>1.6</td>
+                                    <td>0.7</td>
+                                    <td>0.2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="container">
-        <div class="table-container">
-          <div class="table-responsive">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Team</th>
-                  <th scope="col">MIN</th>
-                  <th scope="col">PPG</th>
-                  <th scope="col">RPG</th>
-                  <th scope="col">APG</th>
-                  <th scope="col">SPG</th>
-                  <th scope="col">BPG</th>
-                </tr>
-              </thead>
-              <tbody class="table-group-divider">
-                <tr>
-                  <th scope="row">1</th>
-                  <td><a href="#" class="player-link">Cruz</a></td>
-                  <td>Joseph</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-gns"></div>
-                      <span>GNS</span>
-                    </div>
-                  </td>
-                  <td>14.2</td>
-                  <td>8.5</td>
-                  <td>3.2</td>
-                  <td>2.1</td>
-                  <td>1.3</td>
-                  <td>0.4</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td><a href="#" class="player-link">Lopez</a></td>
-                  <td>Andre</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-gns"></div>
-                      <span>GNS</span>
-                    </div>
-                  </td>
-                  <td>23.3</td>
-                  <td>15.7</td>
-                  <td>6.8</td>
-                  <td>4.2</td>
-                  <td>1.8</td>
-                  <td>1.2</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td><a href="#" class="player-link">Estanislao</a></td>
-                  <td>Jardin</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-gns"></div>
-                      <span>GNS</span>
-                    </div>
-                  </td>
-                  <td>10.2</td>
-                  <td>5.3</td>
-                  <td>2.1</td>
-                  <td>1.5</td>
-                  <td>0.8</td>
-                  <td>0.2</td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td><a href="#" class="player-link">Enriquez</a></td>
-                  <td>Joshua</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-gns"></div>
-                      <span>GNS</span>
-                    </div>
-                  </td>
-                  <td>18.5</td>
-                  <td>12.4</td>
-                  <td>4.5</td>
-                  <td>3.2</td>
-                  <td>1.5</td>
-                  <td>0.6</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>
-                    <a href="player-profile.html" class="player-link">Alcala</a>
-                  </td>
-                  <td>Nikos</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-gns"></div>
-                      <span>GNS</span>
-                    </div>
-                  </td>
-                  <td>16.8</td>
-                  <td>9.8</td>
-                  <td>5.3</td>
-                  <td>2.4</td>
-                  <td>1.1</td>
-                  <td>0.8</td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td><a href="#" class="player-link">Landa</a></td>
-                  <td>Steven</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-gns"></div>
-                      <span>GNS</span>
-                    </div>
-                  </td>
-                  <td>21.5</td>
-                  <td>13.2</td>
-                  <td>7.1</td>
-                  <td>1.8</td>
-                  <td>0.9</td>
-                  <td>1.4</td>
-                </tr>
-                <tr>
-                  <th scope="row">7</th>
-                  <td><a href="#" class="player-link">Padilla</a></td>
-                  <td>Julio</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-gns"></div>
-                      <span>GNS</span>
-                    </div>
-                  </td>
-                  <td>15.4</td>
-                  <td>8.9</td>
-                  <td>3.8</td>
-                  <td>4.5</td>
-                  <td>1.6</td>
-                  <td>0.3</td>
-                </tr>
-                <tr>
-                  <th scope="row">8</th>
-                  <td><a href="#" class="player-link">Mistosamente</a></td>
-                  <td>Fritz</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-swg"></div>
-                      <span>SWG</span>
-                    </div>
-                  </td>
-                  <td>22.7</td>
-                  <td>16.5</td>
-                  <td>4.2</td>
-                  <td>5.3</td>
-                  <td>1.9</td>
-                  <td>0.5</td>
-                </tr>
-                <tr>
-                  <th scope="row">9</th>
-                  <td><a href="#" class="player-link">Tanara</a></td>
-                  <td>James</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-swg"></div>
-                      <span>SWG</span>
-                    </div>
-                  </td>
-                  <td>19.8</td>
-                  <td>11.3</td>
-                  <td>6.5</td>
-                  <td>2.8</td>
-                  <td>1.2</td>
-                  <td>0.9</td>
-                </tr>
-                <tr>
-                  <th scope="row">10</th>
-                  <td><a href="#" class="player-link">Tirona</a></td>
-                  <td>Thomas</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-swg"></div>
-                      <span>SWG</span>
-                    </div>
-                  </td>
-                  <td>17.6</td>
-                  <td>10.2</td>
-                  <td>5.7</td>
-                  <td>3.1</td>
-                  <td>1.4</td>
-                  <td>0.7</td>
-                </tr>
-
-                <tr>
-                  <th scope="row">11</th>
-                  <td><a href="#" class="player-link">Santos</a></td>
-                  <td>Lucas</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-sqm"></div>
-                      <span>SQM</span>
-                    </div>
-                  </td>
-                  <td>24.5</td>
-                  <td>17.8</td>
-                  <td>5.9</td>
-                  <td>4.7</td>
-                  <td>1.7</td>
-                  <td>0.8</td>
-                </tr>
-                <tr>
-                  <th scope="row">12</th>
-                  <td><a href="#" class="player-link">Soriano</a></td>
-                  <td>Jed</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-sqm"></div>
-                      <span>SQM</span>
-                    </div>
-                  </td>
-                  <td>19.3</td>
-                  <td>11.5</td>
-                  <td>6.2</td>
-                  <td>2.8</td>
-                  <td>1.3</td>
-                  <td>0.9</td>
-                </tr>
-                <tr>
-                  <th scope="row">13</th>
-                  <td><a href="#" class="player-link">Suriaga</a></td>
-                  <td>Edrick</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-sqm"></div>
-                      <span>SQM</span>
-                    </div>
-                  </td>
-                  <td>16.8</td>
-                  <td>9.4</td>
-                  <td>4.3</td>
-                  <td>3.5</td>
-                  <td>1.1</td>
-                  <td>0.4</td>
-                </tr>
-                <tr>
-                  <th scope="row">14</th>
-                  <td><a href="#" class="player-link">Torreno</a></td>
-                  <td>Doenne</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-fa"></div>
-                      <span>FA</span>
-                    </div>
-                  </td>
-                  <td>12.5</td>
-                  <td>6.8</td>
-                  <td>3.1</td>
-                  <td>1.9</td>
-                  <td>0.8</td>
-                  <td>0.3</td>
-                </tr>
-                <tr>
-                  <th scope="row">15</th>
-                  <td><a href="#" class="player-link">Salvador</a></td>
-                  <td>Logan</td>
-                  <td>
-                    <div class="team-indicator">
-                      <div class="team-tag team-fa"></div>
-                      <span>FA</span>
-                    </div>
-                  </td>
-                  <td>11.2</td>
-                  <td>5.9</td>
-                  <td>2.8</td>
-                  <td>1.6</td>
-                  <td>0.7</td>
-                  <td>0.2</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
     </div>
 
     <script src="javascript/navbar.js"></script>
